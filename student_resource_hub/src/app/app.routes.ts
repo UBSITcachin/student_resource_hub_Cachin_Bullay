@@ -8,6 +8,6 @@ export const routes: Routes = [
   { path: 'home', component: ResourceListComponent },
   { path: 'about', component: ResourceDetailsComponent },
   { path: 'add-forms', component: ResourceFormComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' }, 
+  { path: 'add-resource', component: ResourceFormComponent }, // Form page
   { path: '**', redirectTo: 'home' } 
 ];

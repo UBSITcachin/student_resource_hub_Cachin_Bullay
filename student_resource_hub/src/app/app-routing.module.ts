@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'home', component: ResourceListComponent },
   { path: 'about', component: ResourceDetailsComponent },
   { path: 'add-forms', component: ResourceFormComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Optional: redirect to home on empty path
+  { path: 'add-resource', component: ResourceFormComponent },
   { path: '**', redirectTo: '/home' } // Optional: handle any unknown paths
 ];
 
