@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from "@angular/core";
+import { Component, EventEmitter, Output } from '@angular/core';
 
 interface ResourceForm {
   title: string;
@@ -27,8 +27,18 @@ export class ResourceFormComponent {
 
   categories = ['Frontend', 'Backend', 'DevOps', 'Database'];
 
+  get isFormValid(): boolean {
+    return this.resource.title.trim() !== '' &&
+           this.resource.description.trim() !== '' &&
+           this.resource.url.trim() !== '' &&
+           this.resource.category.trim() !== '' &&
+           this.resource.author.trim() !== '';
+  }
+
   onSubmit(): void {
-    this.submitForm.emit(this.resource);
+    if (this.isFormValid) {
+      this.submitForm.emit(this.resource);
+    }
   }
 
   onCancel(): void {
