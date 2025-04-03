@@ -13,6 +13,7 @@ interface Category {
 }
 
 @Component({
+  standalone: true,
   selector: 'app-resource-category',
   templateUrl: './resource-category.component.html',
   styleUrls: ['./resource-category.component.css']
