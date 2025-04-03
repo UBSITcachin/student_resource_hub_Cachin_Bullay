@@ -1,8 +1,8 @@
-/* General Navbar Styling */
+
 nav {
   font-family: 'Roboto', sans-serif;
-  background-color: #007bff; /* Blue color for the navbar */
-  padding: 10px 20px; /* Padding for better spacing */
+  background-color: #004080; 
+  padding: 10px 20px; 
 }
 
 /* Nav Menu Styling */
@@ -12,8 +12,8 @@ nav {
   padding: 0;
   margin: 0;
   align-items: center;
-  justify-content: space-between;  /* Spread out nav items */
-  width: 100%;  /* Full width for proper alignment */
+  justify-content: space-between;  
+  width: 100%; 
 }
 
 /* Nav Item Styling */

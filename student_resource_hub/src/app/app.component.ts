@@ -3,9 +3,9 @@ import { RouterModule } from '@angular/router'; // For routing
 import { ResourceListComponent } from './resource-list/resource-list.component'; 
 import { FooterComponent } from './footer/footer.component'; 
 import { ResourceDetailsComponent } from './resource-details/resource-details.component';
-import { ResourceCategoryComponent } from './resource-category/resource-category.component';
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 import { HeaderComponent } from './header/header.component';
+
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,6 @@ import { HeaderComponent } from './header/header.component';
     ResourceListComponent, 
     FooterComponent, 
     ResourceDetailsComponent,
-    ResourceCategoryComponent,
     NavigationMenuComponent,
     HeaderComponent
   ],

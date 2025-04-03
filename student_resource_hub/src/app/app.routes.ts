@@ -1,15 +1,10 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { ResourceListComponent } from './resource-list/resource-list.component';  // Import ResourceListComponent
-import { ResourceDetailsComponent } from './resource-details/resource-details.component';
+import { Routes } from '@angular/router';
+import { ResourceListComponent } from './resource-list/resource-list.component'; 
+import { ResourceDetailsComponent } from './resource-details/resource-details.component'; 
+import { ResourceFormComponent } from './resource-form/resource-form.component'; 
 
 export const routes: Routes = [
-  { path: '', component: ResourceListComponent },  // Default path should be routed to resource-list
-  { path: 'about', component: ResourceDetailsComponent }
+  { path: '', component: ResourceListComponent },  
+  { path: 'about', component: ResourceDetailsComponent },  
+  { path: 'add-resource', component: ResourceFormComponent },  
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],  // forRoot should only be in your root module
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }

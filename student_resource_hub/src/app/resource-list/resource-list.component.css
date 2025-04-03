@@ -1,37 +1,46 @@
+/* Adding some space from the navbar */
 .resource-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .resource-card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 8px;
-    width: 250px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  h3 {
-    margin: 0 0 10px;
-  }
-  
-  .category, .tag {
-    display: block;
-    font-size: 0.9em;
-    color: #666;
-  }
-  
-  button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;  /* Center the items horizontally */
+  margin-top: 20px;         /* Space from the navbar */
+  padding: 0 15px;          /* Optional: Adds some padding for smaller screens */
+}
+
+/* Resource card styling */
+.resource-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Adds bottom spacing between cards */
+}
+
+/* Heading styling */
+h3 {
+  margin: 0 0 10px;
+}
+
+/* Category and tag styling */
+.category, .tag {
+  display: block;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Button styling */
+button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

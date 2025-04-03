@@ -10,6 +10,7 @@ interface Resource {
 }
 
 @Component({
+  standalone: true,
   selector: 'app-resource-details',
   imports: [],
   templateUrl: './resource-details.component.html',
