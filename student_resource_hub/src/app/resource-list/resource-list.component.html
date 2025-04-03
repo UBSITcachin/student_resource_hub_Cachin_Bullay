@@ -1,0 +1,9 @@
+<div class="resource-list">
+    <div class="resource-card" *ngFor="let resource of resources">
+      <h3>{{ resource.title }}</h3>
+      <p>{{ resource.description }}</p>
+      <span class="category">{{ resource.category }}</span>
+      <span class="tag">{{ resource.tag }}</span>
+      <button (click)="viewDetails(resource)">View Details</button>
+    </div>
+  </div>
