@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 interface ResourceForm {
   title: string;
@@ -29,6 +30,8 @@ export class ResourceFormComponent {
 
   categories = ['Frontend', 'Backend', 'DevOps', 'Database'];
 
+  constructor(private router: Router) {}
+
   get isFormValid(): boolean {
     return this.resource.title.trim() !== '' &&
            this.resource.description.trim() !== '' &&
@@ -44,10 +47,16 @@ export class ResourceFormComponent {
   onSubmit(): void {
     if (this.isFormValid) {
       this.submitForm.emit(this.resource);
+      this.navigateToList();
     }
   }
 
   onCancel(): void {
     this.cancelForm.emit();
+    this.navigateToList();
+  }
+
+  navigateToList(): void {
+    this.router.navigate(['/resources']);
   }
 }
