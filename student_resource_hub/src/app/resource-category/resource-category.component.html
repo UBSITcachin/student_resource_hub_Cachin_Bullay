@@ -1,1 +1,11 @@
-<p>resource-category works!</p>
+<div class="category-container">
+    <h2>{{ category.title }}</h2>
+    <p class="category-description">{{ category.description }}</p>
+  
+    <div class="resource-list">
+      <div class="resource-card" *ngFor="let resource of category.resources">
+        <h3>{{ resource.title }}</h3>
+        <p>{{ resource.description }}</p>
+      </div>
+    </div>
+  </div>

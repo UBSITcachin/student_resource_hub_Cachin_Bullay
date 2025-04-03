@@ -1,0 +1,33 @@
+.category-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  .category-description {
+    font-size: 1.1em;
+    color: #555;
+  }
+  
+  .resource-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .resource-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    width: 45%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background: #f9f9f9;
+  }
