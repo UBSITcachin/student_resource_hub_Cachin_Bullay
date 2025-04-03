@@ -1,7 +1,9 @@
-<nav>
+<nav class="navbar">
   <ul class="nav-menu">
-    <li><a href="#">Home</a></li>
+
+    <li><a routerLink="/" class="nav-link">Home</a></li>
     
+
     <li class="dropdown">
       <a href="#" class="dropdown-toggle">Categories</a>
       <ul class="dropdown-menu">
@@ -10,13 +12,18 @@
         <li><a href="#">Math</a></li>
       </ul>
     </li>
+    
 
-    <li><a href="#">About</a></li>
-    <li><a href="#">Add Resource</a></li>
+    <li><a routerLink="/about" class="nav-link">About</a></li>
+    
 
-    <!-- Los Pollos Hermanos Logo -->
+    <li><a href="#" class="nav-link">Add Resource</a></li>
+    
+ 
     <li class="nav-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Los_Pollos_Hermanos_logo.png" alt="Los Pollos Hermanos" />
+      <a href="#">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Los_Pollos_Hermanos_logo.png" alt="Los Pollos Hermanos" />
+      </a>
     </li>
   </ul>
 </nav>

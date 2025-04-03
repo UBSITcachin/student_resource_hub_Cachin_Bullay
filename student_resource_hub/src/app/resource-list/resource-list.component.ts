@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common'; // Import CommonModule for ngIf/ngFor
 
 interface Resource {
   title: string;
@@ -9,6 +10,8 @@ interface Resource {
 
 @Component({
   selector: 'app-resource-list',
+  standalone: true, // Mark this component as standalone
+  imports: [CommonModule], // Import CommonModule to use Angular directives like ngFor/ngIf
   templateUrl: './resource-list.component.html',
   styleUrls: ['./resource-list.component.css']
 })
