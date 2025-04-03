@@ -75,3 +75,8 @@ nav {
   margin-left: 15px;
   border-radius: 50
 }
+
+.nav-menu li a.active {
+  color: #ff9800;
+  font-weight: bold;
+}

@@ -1,63 +1,24 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { Router } from '@angular/router';
-
-interface ResourceForm {
-  title: string;
-  description: string;
-  url: string;
-  category: string;
-  author: string;
-  imageURL?: string;
-}
+import { Component } from '@angular/core';
+import { NgFor } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 
 @Component({
-  standalone: true,
   selector: 'app-resource-form',
+  standalone: true,
   templateUrl: './resource-form.component.html',
-  styleUrls: ['./resource-form.component.css']
+  styleUrls: ['./resource-form.component.css'],
+  imports: [FormsModule, NgFor, RouterLink, RouterLinkActive, RouterModule]
 })
 export class ResourceFormComponent {
-  @Output() submitForm = new EventEmitter<ResourceForm>();
-  @Output() cancelForm = new EventEmitter<void>();
+  resource = { title: '', description: '', url: '', category: '', author: '' };
+  categories = ['Programming', 'Design', 'Math'];
 
-  resource: ResourceForm = {
-    title: '',
-    description: '',
-    url: '',
-    category: '',
-    author: '',
-    imageURL: ''
-  };
-
-  categories = ['Frontend', 'Backend', 'DevOps', 'Database'];
-
-  constructor(private router: Router) {}
-
-  get isFormValid(): boolean {
-    return this.resource.title.trim() !== '' &&
-           this.resource.description.trim() !== '' &&
-           this.resource.url.trim() !== '' &&
-           this.resource.category.trim() !== '' &&
-           this.resource.author.trim() !== '';
+  onSubmit() {
+    console.log('Form submitted:', this.resource);
   }
 
-  get imageClass(): string {
-    return this.resource.imageURL ? 'has-image' : 'no-image';
-  }
-
-  onSubmit(): void {
-    if (this.isFormValid) {
-      this.submitForm.emit(this.resource);
-      this.navigateToList();
-    }
-  }
-
-  onCancel(): void {
-    this.cancelForm.emit();
-    this.navigateToList();
-  }
-
-  navigateToList(): void {
-    this.router.navigate(['/resources']);
+  onCancel() {
+    console.log('Form canceled');
   }
 }
