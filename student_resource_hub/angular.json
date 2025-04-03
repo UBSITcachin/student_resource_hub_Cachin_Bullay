@@ -27,9 +27,14 @@
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/morph/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
@@ -99,6 +104,6 @@
     }
   },
   "cli": {
-    "analytics": "84d19e4a-171c-4d2e-ac9e-f027e76be489"
+    "analytics": "0f5f1545-c3a1-49ed-b8f9-1ac315f304e8"
   }
 }

@@ -1,0 +1,8 @@
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Aligns items left and right */
+    align-items: center;
+    background-color: #004080; /* Matches the header background */
+    padding: 10px 20px;
+  }
+  
