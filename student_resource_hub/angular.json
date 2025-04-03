@@ -102,12 +102,5 @@
         }
       }
     }
-  },
-  "cli": {
-<<<<<<< HEAD
-    "analytics": "0f5f1545-c3a1-49ed-b8f9-1ac315f304e8"
-=======
-    "analytics": "3a9b68e7-9e43-49c8-85d0-7e1c7c385bc8"
->>>>>>> feature/resource-display
   }
 }
