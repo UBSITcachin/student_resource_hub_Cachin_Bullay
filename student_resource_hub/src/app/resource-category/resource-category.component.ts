@@ -1,11 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+interface Resource {
+  title: string;
+  description: string;
+  category: string;
+}
+
+interface Category {
+  title: string;
+  description: string;
+  resources: Resource[];
+}
 
 @Component({
   selector: 'app-resource-category',
-  imports: [],
   templateUrl: './resource-category.component.html',
-  styleUrl: './resource-category.component.css'
+  styleUrls: ['./resource-category.component.css']
 })
 export class ResourceCategoryComponent {
-
+  @Input() category!: Category;
 }
