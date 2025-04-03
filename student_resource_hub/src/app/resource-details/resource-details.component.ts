@@ -1,26 +1,9 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-
-interface Resource {
-  title: string;
-  fullDescription: string;
-  category: string;
-  url: string;
-  author: string;
-  publicationDate: string;
-}
+import { Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'app-resource-details',
-  imports: [],
+  standalone: true,
   templateUrl: './resource-details.component.html',
-  styleUrl: './resource-details.component.css'
+  styleUrls: ['./resource-details.component.css']
 })
-export class ResourceDetailsComponent {
-  @Input() resource!: Resource;
-  @Output() backToList = new EventEmitter<void>();
-
-  goBack(): void {
-    this.backToList.emit();
-  }
-}
+export class ResourceDetailsComponent {}
