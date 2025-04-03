@@ -1,0 +1,26 @@
+.footer {
+    background-color: #004080; 
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .members-placeholder {
+    color: #f0f0f0;
+    font-style: italic;
+  }
+  
