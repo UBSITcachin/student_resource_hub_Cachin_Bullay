@@ -6,6 +6,7 @@ interface ResourceForm {
   url: string;
   category: string;
   author: string;
+  imageURL?: string;
 }
 
 @Component({
@@ -22,7 +23,8 @@ export class ResourceFormComponent {
     description: '',
     url: '',
     category: '',
-    author: ''
+    author: '',
+    imageURL: ''
   };
 
   categories = ['Frontend', 'Backend', 'DevOps', 'Database'];
@@ -33,6 +35,10 @@ export class ResourceFormComponent {
            this.resource.url.trim() !== '' &&
            this.resource.category.trim() !== '' &&
            this.resource.author.trim() !== '';
+  }
+
+  get imageClass(): string {
+    return this.resource.imageURL ? 'has-image' : 'no-image';
   }
 
   onSubmit(): void {
